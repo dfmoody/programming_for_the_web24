@@ -1,0 +1,10 @@
+
+body {
+    background:url('https://source.unsplash.com/3tYZjGSBwbk');
+}
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: "kanit";
+    font-weight: 200;
+}
