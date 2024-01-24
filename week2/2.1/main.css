@@ -1,6 +1,8 @@
 
 body {
-    background-color: rgb(225, 255, 254);
+    background-image: linear-gradient(rgb(171, 249, 201), rgb(171, 247, 246));
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 h1 {
     color: rgb(0, 0, 0);
