@@ -44,5 +44,5 @@ console.log(quizGame)
 
 const randomIdx = Math.round(Math.random() * quizGame.length - 1);
 
-const userAnswer = window.prompt('Answer the following Art History question" \n' + quizGame[randomIdx].question);
+const userAnswer = window.prompt('Answer the following Art History question: \n' + quizGame[randomIdx].question);
 window.alert('You answered: \n' + userAnswer + '\nThe correct answer is: \n' + quizGame[randomIdx].answer)
