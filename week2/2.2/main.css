@@ -1,0 +1,12 @@
+
+body {
+    background-image: linear-gradient(rgb(171, 249, 201), rgb(171, 247, 246));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: "kanit";
+    font-weight: 200;
+}
