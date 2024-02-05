@@ -2,7 +2,7 @@ let submitAnswerButton;
 let questionInput;
 let currentQuestion;
 let response;
-let responseColor = 'green';
+let responseColor = 'black';
 let heading;
 let statements = [
   { question: '"The Mona Lisa" was painted by Leonardo ____________', answer: 'da vinci' },
@@ -15,7 +15,6 @@ let statements = [
 let correctAnswersCount = 0; // Counter for correct answers
 let incorrectAnswersCount = 0; // Counter for incorrect answers
 
-
 function next () {
   if (statements.length < 1) {
     window.alert('CONGRATULATIONS. YOU WON!!');
@@ -25,13 +24,23 @@ function next () {
   return statements[randomIndex];
 }
 
+// reset game
+function resetGame() {
+  incorrectAnswersCount = 0;
+  correctAnswersCount = 0;
+  response = '';
+  currentQuestion = next();
+  message = currentQuestion.question;
+  questionInput.value('');
+}
+
 function checkQuestion () {
   if (currentQuestion.answer === questionInput.value()) {
     // remove correct answer from array
     statements = statements.filter(statementObj => {
       return currentQuestion.answer !== statementObj.answer;
     });
-    responseColor = 'green';
+    responseColor = 'black';
     // this is the correct condition
     response = "Great Job! Let's try another one!";
     correctAnswersCount++; // correct answers count
@@ -66,6 +75,10 @@ function setup() {
   submitAnswerButton.size(210, 24);
   submitAnswerButton.mousePressed(checkQuestion);
   submitAnswerButton.position(50, 290);
+  resetButton = createButton('reset game');
+  resetButton.size(110, 24);
+  resetButton.position (300, 290);
+  resetButton.mousePressed(resetGame);
   // Add "Enter" key as an alternative to submit button
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
