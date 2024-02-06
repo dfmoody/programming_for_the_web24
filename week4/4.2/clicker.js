@@ -1,36 +1,56 @@
-// select empty div and assign to a variable
-const myEmptyDiv = document.querySelector('#myEmptyDiv');
-// put an h1 inside of it
-// create a new element
-const heading1 = document.createElement('h1');
-const heading2 = document.createElement('h2');
-const heading3 = document.createElement('h3');
-const heading4 = document.createElement('h4');
-const heading5 = document.createElement('h5');
+// Set up coordinates of the rectangle
+let rectX = 0;
+let rectY;
 
-// add text to new elements of H1-H5
-heading1.innerHTML = 'All About Llamas';
-heading2.innerHTML = 'Llamas are related to camels, and like camels, are used to carry goods over long distances.';
-heading3.innerHTML = 'Click HERE to see what color Llamas are';
-heading4.innerHTML = 'A llama can carry as much as 200 pounds for 12 hours a day, but are not ridden.';
-heading5.innerHTML = 'Habitat: Llamas are native to the mountainous region of South America.';
+// Set up hieght and width of rectangle
+const rectHeight = 75;
+const rectWidth = 75;
 
-// attach new elements to emptydiv
-myEmptyDiv.appendChild(heading1);
-myEmptyDiv.appendChild(heading2);
-myEmptyDiv.appendChild(heading4);
-myEmptyDiv.appendChild(heading5);
-myEmptyDiv.appendChild(heading3);
+// Set up function of click counter starting at 0
+let clickCount = 0;
+let loopCount = 0;
 
-heading3.style.color = 'darkred';
+function setup () {
+  createCanvas(500, 500);
+  // Randomly assign a y-coordinate for the rectangle within the canvas
+  rectY = random(height - rectHeight);
+}
 
+function draw () {
+  background('cornsilk');
+  // Call the function to draw the rectangle - function below
+  fill('darkred');
+  text('You have 2 tries to click the Square as many times as possible', 10, 15);
+  text('Total Hits: ' + clickCount, 170, 35);
+  text('Rectangle Location: ' + [rectX], 10, 35);
+  drawShape();
+  // Increment the x-coordinate of the rectangle to make it move horizontally
+  rectX++;
 
-// make cursor a point when hovering over h3
-heading3.style.cursor = 'pointer';
+  if (rectX > width) {
+    loopCount++; // Increment loop counter
+    rectY = random(height - rectHeight);
+    if (loopCount >= 2) { // Check if loopCount is equal to or greater than 2
+      noLoop();
+      text('Great Job! Your score was ' + clickCount, 100, 200);
+    } else {
+      rectX = 0; // Reset the x-coordinate of the rectangle to restart the loop
+    }
+  }
+}
 
-heading3.addEventListener('click', handleHeadingClick);
+function mousePressed() {
+  // Check if the mouse click is within the boundaries of the rectangle, rectX is constantly increasing by 1, rectY is a randomized
+  if ((mouseX >= rectX && mouseX <= rectX + rectWidth) && (mouseY >= rectY && mouseY <= rectY + rectHeight)) {
+    // Increment the click count if the mouse click is within the rectangle
+    clickCount++;
+    // Log the hit count to the console
+    console.log('hit', clickCount);
+  }
+}
 
-function handleHeadingClick () {
-  console.log('Heading has been clicked');
-  document.body.style.backgroundColor = 'papayawhip';
+function drawShape() {
+  fill('slateblue'); // Set the fill color of rect outlined below
+  // Draw the rectangle using the specified coordinates and dimensions
+  rect(rectX, rectY, rectWidth, rectHeight);
 }

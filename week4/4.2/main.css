@@ -1,0 +1,10 @@
+body {
+    background-image: linear-gradient(rgb(239, 236, 182), rgb(247, 203, 171));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: 200;
+}
