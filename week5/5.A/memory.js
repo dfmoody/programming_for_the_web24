@@ -2,12 +2,12 @@
 const boxWidth = 100;
 const boxHeight = 140;
 
-// Variables for starting positions and arrays
+// starting positions and arrays
 let startingX = 50;
 let startingY = 150;
-let fontTitle;
 let selectedFront = [];
 let cardFrontArray = [];
+let fontTitle;
 
 // Game starting state
 const gameState = {
@@ -26,7 +26,7 @@ const DOWN = 'down';
 const UP = 'up';
 const cards = [];
 
-// Preload function to load images
+// Preload to load images & font
 function preload () {
   cardBack = loadImage('img/cardBack.png');
   cardFrontArray = [
@@ -45,7 +45,6 @@ function preload () {
   fontTitle = loadFont('fonts/PhosphateInline.ttf');
 }
 
-// Setup function to create the canvas and initialize the game
 function setup () {
   createCanvas(1600, 1200);
   background(0, 0, 0, 0);
