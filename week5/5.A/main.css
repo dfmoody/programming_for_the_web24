@@ -8,3 +8,16 @@ h1 {
     font-size: 40px;
     font-weight: 200;
 } */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    text-align: center;
+    background: url(https://images.unsplash.com/photo-1495242024181-f22bd6b31f3f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
