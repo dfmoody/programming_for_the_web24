@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   // conditional (variable && (if true condition))
-  // turnerary (variable ? (if true condition) : (if false condition))
+  // ternerary (variable ? (if true condition) : (if false condition))
   const llamaFacts = [
     "Llamas are actually from the same family as camels.",
     "Llamas are much more friendly than alpacas.",
@@ -20,10 +20,10 @@ function App() {
       <h1>Amazing Llamas</h1>
       <h2>{twoFacts}</h2>
       <h3>
-        {/* ternary variable */}
-        {/* ternary condition there are no facts, lets the user know there are no llama facts */}
-        {/* ternary condition if its only 1 llama fact than display one */}
-        {/* ternary regular condition, displays last two facts */}
+        {/* ternerary variable */}
+        {/* ternerary condition if there are no facts, lets the user know there are no llama facts */}
+        {/* ternerary condition if its only 1 llama fact than display one */}
+        {/* ternerary regular condition, displays last two facts */}
         {llamaFacts.length === 0 ? 
         (<p>No llama facts available</p>) 
         : llamaFacts.length === 1 ? 
