@@ -22,7 +22,7 @@ function App() {
   };
 
   // return a div with the Camelid components
-  // include props based on llama and alpaca object
+  // include properties based on llama and alpaca objects
   return (
     <>
     <div className='info'>
