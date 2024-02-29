@@ -12,12 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.info {
-  width: 400px;
-}
-.camelid-image{
-  width: 400px;
-}
 a {
   font-weight: 500;
   color: #646cff;
