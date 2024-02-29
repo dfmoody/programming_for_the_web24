@@ -10,13 +10,13 @@ function App() {
   // include properties: image, alt and trivia
 
   const llama = {
-    image: '/llama.jpg',
+    image: '../dist/llama.jpg',
     alt: 'Llama',
     trivia: 'Llamas are social animals and live in herds. They hum when they are content.',
   };
   
   const alpaca = {
-    image: '/alpaca.jpg',
+    image: '../dist/alpaca.jpg',
     alt: 'Alpaca',
     trivia: 'Alpacas are bred specifically for their fiber. They come in more than 22 natural colors.',
   };
