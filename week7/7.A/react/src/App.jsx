@@ -9,30 +9,35 @@ const App = () => {
       name: "Back to the Future",
       year: 1985,
       genre: "Science Fiction",
+      image: "../dist/back.jpg",
       description: "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown."
     },
     {
       name: "Indiana Jones and the Raiders of the Lost Ark",
       year: 1981,
       genre: "Action, Adventure",
+      image: "../dist/raiders.jpg",
       description: "In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers."
     },
     {
       name: "The Terminator",
       year: 1984,
       genre: "Science Fiction, Action",
+      image: "../dist/terminator.jpg",
       description: "A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation."
     },
     {
       name: "E.T. the Extra-Terrestrial",
       year: 1982,
       genre: "Science Fiction, Family",
+      image: "../dist/et.jpg",
       description: "A troubled child summons the courage to help a friendly alien escape Earth and return to his home world."
     },
     {
       name: "The Shining",
       year: 1980,
       genre: "Horror",
+      image: "../dist/shining.jpg",
       description: "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future."
     }
   ];
@@ -53,6 +58,7 @@ const App = () => {
             <th>Name</th>
             <th>Year</th>
             <th>Genre</th>
+            <th>Image</th>
             <th>Description</th>
           </tr>
         </thead>
