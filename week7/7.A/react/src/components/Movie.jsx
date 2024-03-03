@@ -10,7 +10,7 @@ const MovieCollection = (props) => {
       <td className="movieName">{props.name}</td>
       <td>{props.year}</td>
       <td>{props.genre}</td>
-      <td>{props.image}</td>
+      <td><img className='movie-image' src={props.image}></img></td>
       <td>{props.description}</td>
     </tr>
   );

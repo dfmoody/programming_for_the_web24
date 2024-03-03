@@ -18,6 +18,9 @@ h1 {
 }
 
 /* Table styles */
+.movie-image {
+  width: 150px;
+}
 .movieTable tr.even-row td {
   background-color: rgba(247, 203, 114, 0.191);
 }
@@ -28,7 +31,6 @@ h1 {
   font-size: 18px;
   font-weight: 600;
 }
-
 .movieTable th, .movieTable td {
   border: 1px solid #dea936;
   padding: 12px 8px;
