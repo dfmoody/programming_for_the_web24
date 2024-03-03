@@ -1,0 +1,54 @@
+/* Background and general text styles */
+body {
+  background-image: url("https://images.unsplash.com/photo-1581905764498-f1b60bae941a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* Header styles */
+h1 {
+  color: rgb(255, 225, 136);
+  font-family: 'Protest Strike', sans-serif;
+  margin: 0px;
+  text-shadow: 3px 2px 1px rgba(0, 0, 0, 3), 0px 0px 2px rgba(0, 0, 0, 3);
+}
+
+/* Table styles */
+.movieTable tr.even-row td {
+  background-color: rgba(247, 203, 114, 0.191);
+}
+.movieTable tr.odd-row td {
+}
+.movieName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.movieTable th, .movieTable td {
+  border: 1px solid #dea936;
+  padding: 12px 8px;
+  text-align: left;
+}
+.movieTable {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  padding: 10px;
+}
+.movieTable table th {
+  font-family: 'Protest Strike', sans-serif;
+  color: white;
+  text-shadow: 1px 2px 10px rgba(0, 0, 0, 1), 1px 2px 1px rgba(0, 0, 0, 3);
+  font-size: 25px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
