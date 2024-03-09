@@ -1,3 +1,7 @@
+import '@fortawesome/fontawesome-free/css/all.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faCopy } from '@fortawesome/free-solid-svg-icons';
+
 const MovieCollection = (props) => {
   // Ternary condition ? valueIfTrue : valueIfFalse
   // If index is divisible by 2 that make it "even-row", if not make it "odd-row"
@@ -13,8 +17,8 @@ const MovieCollection = (props) => {
       <td><img className='movie-image' src={props.image}></img></td>
       <td>{props.description}</td>
       <td>
-        <button onClick={props.onDuplicate} className="button buttonDuplicate">Duplicate</button> {/* Duplicate button */}
-        <button onClick={props.onDelete} className="button buttonDelete">Delete</button> {/* Delete button */}
+        <button onClick={props.onDuplicate} className="button buttonDuplicate"><FontAwesomeIcon icon={faCopy} /></button> {/* Duplicate button */}
+        <button onClick={props.onDelete} className="button buttonDelete"><FontAwesomeIcon icon={faTrash} /></button> {/* Delete button */}
       </td>
     </tr>
   );
