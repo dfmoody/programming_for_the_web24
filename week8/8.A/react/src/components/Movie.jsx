@@ -13,8 +13,8 @@ const MovieCollection = (props) => {
       <td><img className='movie-image' src={props.image}></img></td>
       <td>{props.description}</td>
       <td>
-        <button onClick={props.onDelete}>Delete</button> {/* Delete button */}
-        <button onClick={props.onDuplicate}>Duplicate</button> {/* Duplicate button */}
+        <button onClick={props.onDuplicate} className="button buttonDuplicate">Duplicate</button> {/* Duplicate button */}
+        <button onClick={props.onDelete} className="button buttonDelete">Delete</button> {/* Delete button */}
       </td>
     </tr>
   );
