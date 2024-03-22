@@ -1,0 +1,22 @@
+.formInput {
+  margin: 30px;
+  width: 300px;
+  padding: 40px;
+  background-color: rgb(254, 194, 164);
+  border: 3px solid saddlebrown;
+}
+
+.formOutput {
+  padding: 20px 40px;
+  margin-top: 20px;
+  background-color: rgb(71, 24, 4);
+  border-radius: 20px;
+  color: white;
+}
+
+body {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
