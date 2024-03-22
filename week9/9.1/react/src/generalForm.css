@@ -1,0 +1,13 @@
+fieldset {
+    margin-bottom: 1.1em;
+  }
+  input[type=checkbox] {
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+  input[type=text] {
+    margin-left: 10px;
+  }
+  input[type=select] {
+    margin-left: 10px;
+  }
