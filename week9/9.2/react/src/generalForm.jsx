@@ -68,36 +68,85 @@ export default function GeneralForm() {
         "Wyoming"
     ]
 
+    const [errorObject, setErrorObject] = useState({
+        firstName: "",
+        lastName: ""
+    })
+        // setup error
+
+    function validateFirstName() {
+        if(!formObject.firstName.trim()) {
+        setErrorObject((prevErrorObject) => {
+            return {
+            ...prevErrorObject,
+            firstName: "First Name is required."
+            }
+        })
+        } else {
+        setErrorObject((prevErrObj) => {
+            return {
+            ...prevErrObj,
+            firstName: ""
+            }
+        })
+        }
+    }
+    function validateLastName() {
+        if(!formObject.lastName.trim()) {
+        setErrorObject((prevErrorObject) => {
+            return {
+            ...prevErrorObject,
+            lastName: "Last Name is required."
+            }
+        })
+        } else {
+        setErrorObject((prevErrObj) => {
+            return {
+            ...prevErrObj,
+            lastName: ""
+            }
+        })
+        }
+    }
+
     const [formObject, setFormObject] = useState(initialFormData);
-    const [errors, setErrors] = useState({});
 
     function changeHandler(event) {
-        const { name, value, id } = event.target;
-
-        setFormObject(prevForm => ({
-            ...prevForm,
-            [name]: value
-        }));
-
-        // Validation portion
-        let error = "";
-        if (name === "firstName" && value.trim() === "") {
-            error = "First Name is required";
-        } else if (name === "lastName" && value.trim() === "") {
-            error = "Last Name is required";
-        } else if (name === "country" && value.trim() === "") {
-            error = "Country is required";
+        console.log(event.target.value);
+        if(event.target.name === "colors") {
+        const colorName = event.target.id;
+        if(formObject.colors.includes(colorName)) {
+            setFormObject({
+            ...formObject,
+            colors: formObject.colors.filter((color) => color !== colorName)
+            })
+        } else {
+            setFormObject({
+            ...formObject,
+            colors: [...formObject.colors, colorName]
+            })
         }
-        setErrors(prevErrors => ({
-            ...prevErrors,
-            [name]: error
-        }));
+        } else {
+        setFormObject((previousForm) => {
+            console.log(event.target.name)
+
+            return {
+            ...previousForm,
+            [event.target.name]: event.target.value
+            }
+        })
+        }
     }
+
     function handleSubmit(event) {
         event.preventDefault();
+        validateFirstName();
+        validateLastName();
+        console.log("submit triggered");
         console.log("the whole form object", formObject)
+
     }
-   
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -173,7 +222,7 @@ export default function GeneralForm() {
                     Almond
                     <input 
                         type="checkbox" 
-                        name="almond" 
+                        name="colors" 
                         id="almond" 
                         checked={formObject.colors.includes("almond")}
                         onChange={changeHandler}
@@ -183,7 +232,7 @@ export default function GeneralForm() {
                         Mahogany
                         <input 
                             type="checkbox" 
-                            name="mahogany" 
+                            name="colors" 
                             id="mahogany" 
                             checked={formObject.colors.includes("mahogany")}
                             onChange={changeHandler}
@@ -193,7 +242,7 @@ export default function GeneralForm() {
                         Goldenrod
                         <input 
                             type="checkbox" 
-                            name="goldenrod" 
+                            name="colors" 
                             id="goldenrod"
                             checked={formObject.colors.includes("goldenrod")}
                             onChange={changeHandler} 
@@ -203,7 +252,7 @@ export default function GeneralForm() {
                         Sienna
                         <input 
                             type="checkbox" 
-                            name="sienna" 
+                            name="colors" 
                             id="sienna" 
                             checked={formObject.colors.includes("sienna")}
                             onChange={changeHandler}
