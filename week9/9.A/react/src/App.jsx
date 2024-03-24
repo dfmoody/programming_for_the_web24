@@ -73,6 +73,7 @@ const App = () => {
     <div className='movieDisplay'>
       <h1>1980's VHS Collection</h1>
       <div className='movieAdd'>
+      <h3> Add to the Collection . . .</h3>
       <AddMovieForm onAddMovie={handleAddMovie} />
       </div>
       <div className='movieCard'>

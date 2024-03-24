@@ -32,9 +32,24 @@ h1 {
   grid-gap: 50px;
 }
 
+h2 {
+  font-family: 'Protest Strike', sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+h3 {
+  font-family: 'Protest Strike', sans-serif;
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
 .movieAdd {
   background-color: rgb(249, 0, 170);
-  margin: 20px;
   border-radius: 20px;
-  padding: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
