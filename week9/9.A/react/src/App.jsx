@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import MovieCollection from './components/Movie.jsx';
+import AddMovieForm from './components/AddMovie.jsx';
 
 const App = () => {
   // Create array of movies with properties: name, year, genre and description
@@ -56,27 +57,35 @@ const App = () => {
     setMovies(updatedMovies);
   };
 
+  const handleAddMovie = (newMovie) => {
+    // Function to add a new movie to the collection
+    const movieWithImage = { ...newMovie, image: '../dist/images/placeholder.jpg' };
+    setMovies([...movies, movieWithImage]);
+  };
   // return div, h1, and table
   // within table include table headers for name, year, genre and description
   // within table include table body pulling from MovieCollection.jsx prop
   // use .map to iterate each element from the movies array {__.map((arguments) => (<Movie Collection />))}
   // MovieCollection set key to index
   // Because the ternary in MovieCollection refers to index, declare index={index} 
-  // MovieCollection {...movie} spread operator for the 
+  // MovieCollection {...movie} spread operator 
   return (
     <div className='movieDisplay'>
       <h1>1980's VHS Collection</h1>
-        <div className='movieCard'>
-          {movies.map((movie, index) => (
-            <MovieCollection
-              key={index}
-              index={index}
-              {...movie}
-              onDelete={() => handleDeleteMovie(index)} // Pass delete function as prop
-              onDuplicate={() => handleDuplicateMovie(index)} // Pass duplicate function as prop
-            />
-          ))}
-        </div>
+      <div className='movieAdd'>
+      <AddMovieForm onAddMovie={handleAddMovie} />
+      </div>
+      <div className='movieCard'>
+        {movies.map((movie, index) => (
+          <MovieCollection
+            key={index}
+            index={index}
+            {...movie}
+            onDelete={() => handleDeleteMovie(index)}
+            onDuplicate={() => handleDuplicateMovie(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

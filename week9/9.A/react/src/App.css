@@ -29,4 +29,12 @@ h1 {
 .movieCard {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 50px;
+}
+
+.movieAdd {
+  background-color: rgb(249, 0, 170);
+  margin: 20px;
+  border-radius: 20px;
+  padding: 5px;
 }

@@ -1,8 +1,13 @@
+/* Styling for the Movie Cards */
 .movie-card {
-    width: 75%;
+    /* width: 75%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 20px;
+    grid-gap: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background-color: #ffffffb7;
     border: 3px solid #00ccff;
     border-radius: 8px;
@@ -12,7 +17,7 @@
   }
   
   .movie-image {
-    width: 200px;
+    height: 200px;
     border-radius: 8px;
     margin-bottom: 10px;
   }
@@ -29,6 +34,8 @@
   
   .description-section {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
   }
   
   .toggle-description {
@@ -38,19 +45,23 @@
     font-weight: bold;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   
   .movie-description {
     margin-top: 10px;
   }
   
-  .movie-actions {
-    grid-column: span 3; /* Make the buttons span all three columns */
+  /* .movie-actions {
+    grid-column: span 3;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
+  } */
   
+  .movie-actions {
+    margin-top: 15px;
+  }
   .button {
     padding: 8px 16px;
     border: none;

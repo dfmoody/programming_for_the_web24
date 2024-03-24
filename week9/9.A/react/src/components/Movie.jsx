@@ -5,12 +5,16 @@ import { faTrash, faCopy, faAngleDown, faAngleUp } from '@fortawesome/free-solid
 import '../components/MovieCard.css';
 
 const MovieCollection = (props) => {
+  // State to track whether the description is shown or hidden
   const [showDescription, setShowDescription] = useState(false);
 
+  // Toggle the description visibility
   const toggleDescription = () => {
     setShowDescription(!showDescription);
   };
 
+  // Set-up return for Movie Card with image, details (name, year, genre) and description
+  // also include two buttons that can duplicate of delete cards
   return (
     <div className="movie-card">
       <img className='movie-image' src={props.image} alt={props.name} />
