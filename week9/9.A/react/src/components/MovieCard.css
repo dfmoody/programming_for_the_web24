@@ -7,9 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color: #ffffffb7;
-    border: 3px solid #00ccff;
+    background-color: #ffffffe4;
+    border: 3px solid rgba(0, 187, 255, 0.874);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;

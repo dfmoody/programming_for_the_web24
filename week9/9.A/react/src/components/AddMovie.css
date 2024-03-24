@@ -8,7 +8,9 @@
 .addForm input[type="text"],
 .addForm input[type="number"],
 .addForm textarea {
-color: #007bff;
+color: #045bb8;
+font-weight: 900;
+font-size: 14px;
 border: 2px solid #e100ff;
 border-radius: 5px;
 box-sizing: border-box;
