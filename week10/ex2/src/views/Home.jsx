@@ -5,6 +5,7 @@ export function Home() {
     return (
         <>
         <h1>Music List</h1>
+        <div className="musicList">
         {musicData.map((song) => {
             return (
                 <div key={song.slug}>
@@ -13,6 +14,7 @@ export function Home() {
                 </div>
             )
         })}
+        </div>
         </>
     )
 }
