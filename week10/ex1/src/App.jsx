@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     {/* Navigation here */}
-    <ul>
+    <ul className='navHome'>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/llamas">Llamas</Link></li>
       <li><Link to="/alpacas">Alpaca</Link></li>
