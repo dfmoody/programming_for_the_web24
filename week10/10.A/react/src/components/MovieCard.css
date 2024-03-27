@@ -1,0 +1,87 @@
+/* Styling for the Movie Cards */
+.movie-card {
+    /* width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffffe4;
+    border: 3px solid rgba(0, 187, 255, 0.874);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .movie-image {
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details {
+    flex-grow: 1;
+  }
+  
+  .movie-name {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .description-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .toggle-description {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .movie-description {
+    margin-top: 10px;
+  }
+  
+  /* .movie-actions {
+    grid-column: span 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  } */
+  
+  .movie-actions {
+    margin-top: 15px;
+  }
+  .button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .buttonDuplicate {
+    background-color: #c04df9;
+  }
+  
+  .buttonDuplicate:hover {
+    background-color: #ff48c4;
+  }
+  
+  .buttonDelete {
+    background-color: #ff3f3f;
+  }
+  
+  .buttonDelete:hover {
+    background-color: #ff48c4;
+  }

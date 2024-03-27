@@ -1,0 +1,55 @@
+/* Background and general text styles */
+body {
+  background-image: url("https://images.unsplash.com/photo-1581905764498-f1b60bae941a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* Header styles */
+h1 {
+  color: #2bd1fc;
+  font-family: 'Protest Strike', sans-serif;
+  margin: 0px;
+  margin-bottom: 20px;
+  text-shadow: 3px 2px 1px rgba(0, 0, 0, 3), 0px 0px 2px rgba(0, 0, 0, 3);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.movieCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 50px;
+}
+
+h2 {
+  font-family: 'Protest Strike', sans-serif;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+h3 {
+  font-family: 'Protest Strike', sans-serif;
+  font-size: 26px;
+  color: rgb(255, 255, 255);
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.movieAdd {
+  background-color: rgb(249, 0, 170);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
