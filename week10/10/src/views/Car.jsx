@@ -10,7 +10,7 @@ export function Car({data}) {
     return(
         <>
         <nav>
-            <Link to="/">Go back Home</Link>
+            <Link to="/">Home</Link>
         </nav>
         <h4>{selectedCar.name}</h4>
         <img src={selectedCar.image} alt={selectedCar.name} />
