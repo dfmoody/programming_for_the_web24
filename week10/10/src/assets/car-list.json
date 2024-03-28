@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "ford_lightning",
+    "rank": 1,
+    "name": "F-150 Lightning",
+    "maker": "Ford",
+    "price": "$54,995",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/20%20Ford_F-150_Lightning.jpg?w=1654&h=930",
+    "description": "Without question, this is the most important EV in America. Why? Its a fully electric version of the Ford F-150 pickup  the US best-selling vehicle for decades  and it proves that EVs are fully adept at doing tough guy truck stuff while also being tech-rich, comfortable, and nice to drive. The F-150 Lightning can even power your house  no, seriously. Just like an internal combustion F-150, the Lightning can really do it all."
+  },
+  {
+    "slug": "bmw_ix",
+    "rank": 2,
+    "name": "iX",
+    "maker": "BMW",
+    "price": "$87,250",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/15%20BMW_iX.jpg?w=1654&h=930",
+    "description": "The BMW iX isn't just an electric variant of an existing car, and right away, you can tell it's better for it. Spend some time inside the iX and you'll agree: this SUV has a posh, roomy cabin that really raises the bar for luxury cars, electric or otherwise."
+  },
+  {
+    "slug": "hyundai_ioniq",
+    "rank": 3,
+    "name": "Ioniq 6",
+    "maker": "Hyundai",
+    "price": "$37,500",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/17%20Hyundai_Ioniq_6.jpg?w=1654&h=930",
+    "description": "Clock the Ioniq 6 from the rear and it kind of looks like an 8-bit Porsche or a pint-sized Mercedes CLS - things we never expected to say about a Hyundai. While not as versatile as the larger Ioniq 5, the Ioniq 6 has the same great attributes, plus a huge focus on design that ensures this EV will command attention wherever it goes."
+  },
+  {
+    "slug": "kia_niro",
+    "rank": 4,
+    "name": "Niro",
+    "maker": "Kia",
+    "price": "$26,940",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/12%20Kia_Niro_EV.jpg?w=1654&h=930",
+    "description": "While not as flashy as the new EV6, don't sleep on the Kia Niro. This compact crossover looks sharp and comes with all of Kia;s latest and greatest tech. Its 253-mile electric driving range is nothing to scoff at, either."
+  },
+  {
+    "slug": "porsche_taycan",
+    "rank": 5,
+    "name": "Taycan",
+    "maker": "Porsche",
+    "price": "$99,400",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/19%20Porsche_Taycan.jpg?w=1654&h=930",
+    "description": "The fact that Porsche sells the Taycan in not one but two wagon variants makes it one of top picks. The Taycan absolutely rips on a winding road, providing the same level of comfort and onboard tech we've come to expect from Porsche. Driving a Taycan never, ever disappoints."
+  },
+  {
+    "slug": "lucid_air",
+    "rank": 6,
+    "name": "Air",
+    "maker": "Lucid",
+    "price": "$77,400",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/14%20Lucid_Air.jpg?w=1654&h=930",
+    "description": "The Lucid Air is like a chic mid-century modern living room on wheels. And with the longest electric driving range of any new EV on sale in the US - 516 miles - you can enjoy those beautiful surroundings over the long haul."
+  },
+  {
+    "slug": "rivian_r1t",
+    "rank": 7,
+    "name": "R1T",
+    "maker": "Rivian",
+    "price": "$69,900",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/11%20Rivian_R1T.jpg?w=1654&h=930",
+    "description": "The term “game-changer” is somewhat overused, but with the Rivian R1T, it's apt. Rivian was the first company to sell a fully electric pickup truck in the US, and the American upstart totally knocked it out of the park. Tough as nails, surprisingly rugged, and full of fun little features, the Rivian R1T has mega appeal. Ditto its SUV sibling, the R1S."
+  },
+  {
+    "slug": "tesla_model_y",
+    "rank": 8,
+    "name": "Model Y",
+    "maker": "Tesla",
+    "price": "$43,990",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/1%20Tesla_Model_Y.jpg?w=1654&h=930",
+    "description": "No automaker has done more for the advancement of electric vehicles than Tesla. The company's Supercharger network is simply unmatched, and the Model Y is one of the best-selling cars in the US today, electric or otherwise. If you're itching to park a Tesla in your driveway, the all-around usable and reasonably priced Model Y is our pick.."
+  },
+  {
+    "slug": "volvo_recharge",
+    "rank": 9,
+    "name": "XC40 Recharge",
+    "maker": "Volvo",
+    "price": "$52,450",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/8%20Audi_E-Tron_GT.jpg?w=1654&h=930",
+    "description": "There's something so satisfying about the Volvo XC40; it's one of our favorite compact SUVs. The XC40's been a champ ever since it launched, but the Recharge is even better, jettisoning the crossover's decidedly anemic internal combustion powertrains in favor of single- or dual-motor electric oomph."
+  },
+  {
+    "slug": "mercedes_eqs",
+    "rank": 10,
+    "name": "EQS SUV",
+    "maker": "Mercedes-Benz",
+    "price": "$104,400",
+    "image": "https://www.topgear.com/sites/default/files/2023/06/4%20Mercedes-Benz_EQS_SUV.jpg?w=1654&h=930",
+    "description": "Mercedes-Benz really impressed us with its fully electric EQS sedan, but those full-size luxury chops are even better in the EQS SUV. The higher seating position means you don't feel like you're sunk in a bathtub from behind the wheel, and back-seat riders will surely appreciate the increased headroom. The exterior styling might be rather bland, but wow does the EQS make a statement from inside."
+  }
+]
