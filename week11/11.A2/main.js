@@ -1,55 +1,91 @@
+let ds;
+
 function setup() {
-  // Create white background to draw on
-  createCanvas(800, 600);
-  background(255); 
+  createCanvas(710, 400);
+  ds = new PenroseLSystem();
+  ds.simulate(5);
 }
 
 function draw() {
-  // Set parameters for the drawing
-  let numShapes = 3;
+  background(0);
+  ds.render();
+}
 
-  // Set up the drawing of triangles
-  for (let i = 0; i < numShapes; i++) {
-      let x1 = random(width);
-      let y1 = random(height);
-      let x2 = x1 + random(-50, 50);
-      let y2 = y1 + random(-50, 50);
-      let x3 = x1 + random(-50, 50);
-      let y3 = y1 + random(-50, 50);
-      let colorVariation = random(-50, 50);
-      let chosenColor = color(47, 90 + colorVariation, 192, 150); // Shades of pink
-      fill(chosenColor);
-      noStroke();
-      triangle(x1, y1, x2, y2, x3, y3);
+function PenroseLSystem() {
+  this.steps = 0;
+
+  // Axiom and rules for a modified L-system
+  this.axiom = "F";
+  this.ruleF = "FF+[+F-F-F]-[-F+F+F]";
+
+  this.startLength = 600.0; 
+  // Increased initial length to fill the screen more quickly
+  this.theta = radians(25); 
+  // Changed angle to a more organic shape
+  this.reset();
+}
+
+PenroseLSystem.prototype.simulate = function (gen) {
+  while (this.getAge() < gen) {
+    this.iterate();
+  }
+}
+
+PenroseLSystem.prototype.reset = function () {
+  this.production = this.axiom;
+  this.drawLength = this.startLength;
+  this.generations = 0;
+}
+
+PenroseLSystem.prototype.getAge = function () {
+  return this.generations;
+}
+
+PenroseLSystem.prototype.iterate = function () {
+  let newProduction = "";
+
+  for (let i = 0; i < this.production.length; ++i) {
+    let step = this.production.charAt(i);
+    // Apply the rule for 'F'
+    if (step == 'F') {
+      newProduction += this.ruleF;
+    } else {
+      // Keep non-'F' characters unchanged
+      newProduction += step;
+    }
   }
 
-  // Set up the drawing of curve
-  for (let i = 0; i < numShapes / 2; i++) {
-      let x1 = random(width);
-      let y1 = random(height);
-      let x2 = x1 + random(-100, 100);
-      let y2 = y1 + random(-100, 100);
-      let x3 = x1 + random(-100, 100);
-      let y3 = y1 + random(-100, 100);
-      let x4 = x1 + random(-100, 100);
-      let y4 = y1 + random(-100, 100);
-      let colorVariation = random(-50, 50);
-      let chosenColor = color(116, 198 + colorVariation, 246, 100); // Shades of purple
-      stroke(chosenColor);
-      noFill();
-      strokeWeight(random(1, 5));
-      bezier(x1, y1, x2, y2, x3, y3, x4, y4);
+  this.drawLength *= 0.5;
+  this.generations++;
+  this.production = newProduction;
+}
+
+PenroseLSystem.prototype.render = function () {
+  translate(width / 2, height);
+
+  let hue = 0; // Variable to control hue for color change
+
+  this.steps += 5;
+  if (this.steps > this.production.length) {
+    this.steps = this.production.length;
   }
 
-  // Set up the drawing of ellipse
-  for (let i = 0; i < numShapes; i++) {
-      let x = random(width);
-      let y = random(height);
-      let size = random(5, 50);
-      let colorVariation = random(-50, 50);
-      let chosenColor = color(6 + colorVariation, 162, 162, 50); // Shades of yellow
-      fill(chosenColor);
-      noStroke();
-      ellipse(x, y, size, size);
+  for (let i = 0; i < this.steps; ++i) {
+    let step = this.production.charAt(i);
+
+    if (step == 'F') {
+      stroke(hue % 255, 180, 125); 
+      hue += 5; // Incrementing hue for the next segment
+      line(0, 0, 0, -this.drawLength);
+      translate(0, -this.drawLength);
+    } else if (step == '+') {
+      rotate(this.theta);
+    } else if (step == '-') {
+      rotate(-this.theta);
+    } else if (step == '[') {
+      push();
+    } else if (step == ']') {
+      pop();
+    }
   }
 }
