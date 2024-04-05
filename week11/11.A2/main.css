@@ -2,3 +2,6 @@ body {
     background-color: rgb(3, 60, 50);
     color: rgb(189, 255, 127);
 }
+p {
+    color: white;
+}
