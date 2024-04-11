@@ -1,0 +1,18 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    color: white;
+}
+h1 {
+    font-size: 35px;
+    color: rgb(55, 255, 0);
+}
+button {
+    font-size: 25px;    
+    padding: 5px 20px;
+    color: rgb(255, 51, 0);
+    background-color: rgb(244, 179, 244);
+}
+button:hover {
+    color: rgb(125, 27, 2);
+    background-color: rgb(255, 81, 255);
+}
