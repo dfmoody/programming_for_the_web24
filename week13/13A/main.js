@@ -12,7 +12,7 @@ function setup() {
   for (let i = 0; i < 17; i++) {
     let x = random(width);
     // keep the fireflies in the upper half
-    let y = random(height * 0.62);
+    let y = random(height * 0.55);
     let firefly = new Firefly(x, y, random(2, 5), random(0.1, 0.3));
     fireflies.push(firefly);
   }
