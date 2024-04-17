@@ -9,10 +9,10 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 17; i++) {
     let x = random(width);
     // keep the fireflies in the upper half
-    let y = random(height * 0.6);
+    let y = random(height * 0.62);
     let firefly = new Firefly(x, y, random(2, 5), random(0.1, 0.3));
     fireflies.push(firefly);
   }
@@ -35,7 +35,7 @@ class Firefly {
     this.size = size;
     // create the outer glow
     this.glowColor = color(150, 255, 0, 10); 
-    this.outerGlowColor = color(150, 255, 0, 5); 
+    this.outerGlowColor = color(150, 255, 0, 4); 
     this.maxSpeed = 1;
   }
 
