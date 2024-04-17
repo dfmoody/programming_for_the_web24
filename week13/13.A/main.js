@@ -1,89 +1,71 @@
-let rows = 1;
-let cols = 12;
-let squareWidth = 40;
-let squareHeight = 160;
-let grid = [];
-let audioFiles = [];
+let backgroundImage;
+let fireflies = [];
 
 function preload() {
-  // Load audio files
-  for (let i = 1; i <= 12; i++) {
-    audioFiles.push(loadSound('sounds/audio' + i + '.wav'));
-  }
+  // background image from Unsplash
+  let imageUrl = 'https://images.unsplash.com/photo-1630695230041-8909e3204778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+  backgroundImage = loadImage(imageUrl);
 }
 
 function setup() {
-  createCanvas(cols * (squareWidth + 2), rows * (squareHeight + 2));
-  // Create rectangle, change colors to look like a piano
-  for (let i = 1; i <= cols; i++) {
-    let x = (i - 1) * (squareWidth + 2);
-    let y = 0;
-    if (i === 1 || i === 3 || i === 5 || i === 6 || i === 8 || i === 10 || i === 12) {
-      grid.push(new Square(x, y, squareWidth, squareHeight, i, false)); // White rectangles
-    } else {
-      grid.push(new Square(x, y, squareWidth, squareHeight, i, true)); // Black rectangles
-    }
+  createCanvas(windowWidth, windowHeight);
+  for (let i = 0; i < 16; i++) {
+    let x = random(width);
+    // keep the fireflies in the upper half
+    let y = random(height * 0.6);
+    let firefly = new Firefly(x, y, random(2, 5), random(0.1, 0.3));
+    fireflies.push(firefly);
   }
-  // Add keyboard event listeners
-  document.addEventListener('keydown', keyPressed);
 }
 
 function draw() {
-  background(255, 0); 
-  for (let square of grid) {
-    square.display();
+  image(backgroundImage, 0, 0, width, height);
+
+  for (let i = 0; i < fireflies.length; i++) {
+    let firefly = fireflies[i];
+    firefly.update();
+    firefly.display();
   }
 }
 
-function mouseClicked() {
-  // Check if the mouse is inside any of the squares and play the corresponding audio file
-  for (let square of grid) {
-    if (square.contains(mouseX, mouseY)) {
-      let index = square.index - 1; 
-      if (index < audioFiles.length) {
-        audioFiles[index].play();
-      }
-      break;
+class Firefly {
+  constructor(x, y, size, speed) {
+    this.position = createVector(x, y);
+    this.velocity = p5.Vector.random2D().mult(speed);
+    this.size = size;
+    // create the outer glow
+    this.glowColor = color(150, 255, 0, 10); 
+    this.outerGlowColor = color(150, 255, 0, 5); 
+    this.maxSpeed = 1;
+  }
+
+  update() {
+    // Move the firefly in a random direction
+    this.position.add(this.velocity);
+
+    // Slowly change direction
+    if (random(1) < 0.21) {
+      this.velocity.rotate(random(-PI / 4, PI / 4));
     }
-  }
-}
 
-function keyPressed(event) {
-  // Check if the pressed key corresponds to a number between 1-9 plus 0,-,+
-  let keyIndex = parseInt(event.key);
-  if (keyIndex === 0) {
-    audioFiles[9].play(); 
-  } else if (event.key === '-') {
-    audioFiles[10].play(); 
-  } else if (event.key === '=') {
-    audioFiles[11].play(); 
-  } else if (keyIndex >= 1 && keyIndex <= 9) {
-    let index = keyIndex - 1;
-    audioFiles[index].play();
-  }
-}
+    this.velocity.limit(this.maxSpeed);
 
-class Square {
-  constructor(x, y, w, h, index, isBlack) {
-    this.x = x;
-    this.y = y;
-    this.width = w;
-    this.height = h;
-    this.index = index;
-    this.isBlack = isBlack;
+    // Wrap around the canvas edges
+    if (this.position.x < 0) this.position.x = width;
+    if (this.position.x > width) this.position.x = 0;
+    if (this.position.y < 0) this.position.y = height;
+    if (this.position.y > height) this.position.y = 0;
   }
 
   display() {
-    stroke(0); 
-    if (this.isBlack) {
-      fill(0);
-    } else {
-      fill(255);
-    }
-    rect(this.x, this.y, this.width, this.height);
-  }
+    noStroke();
+    fill(this.outerGlowColor);
+    ellipse(this.position.x, this.position.y, this.size * 15, this.size * 15);
 
-  contains(px, py) {
-    return px > this.x && px < this.x + this.width && py > this.y && py < this.y + this.height;
+    fill(this.glowColor);
+    ellipse(this.position.x, this.position.y, this.size * 5, this.size * 5);
+
+    fill(230, 200, 150, 200); // Light yellow core
+    ellipse(this.position.x, this.position.y, this.size, this.size);
   }
 }
