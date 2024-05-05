@@ -1,0 +1,190 @@
+/* General Styles */
+
+body {
+    background-image: url("background4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    font-family: 'DM Sans';
+}
+/* Header Styles */
+h1 {
+    font-family: 'Russo One';
+    font-weight: 100;
+    text-shadow: 4px 2px 2px black;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;  
+}
+
+h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px black;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    background-color: rgba(255, 255, 255, 0.278);
+    padding: 10px 50px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+}
+
+/* Input Section: Goal Inputs, Time and Button*/
+
+input[type="text"], select {
+width: 100%;
+padding: 8px;
+margin-bottom: 10px;
+box-sizing: border-box;
+color: #102345;
+font-family: 'Bebas Neue';
+font-weight: 800;
+font-size: 30px;
+}
+
+#goalPaceInput {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    color: #102345;
+}
+#input-area {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.179);
+    width: auto;
+    padding: 20px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#goalRace {
+    width: 320px;
+    text-align: center;
+}
+
+#hours1, #hours2, #minutes1, #minutes2, #seconds1, #seconds2 {
+    width: 50px;
+}
+#submitButton {
+    width: 280px;
+}
+
+
+button {
+width: 100%;
+padding: 10px;
+background-color: #0214232e;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #10234584;
+}
+
+/* Data Fields Section: Grid container and items */
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 200px;
+    width: auto;
+    justify-content: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    font-size: 16px;
+    background-color: rgba(2, 33, 70, 0.372);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+
+.goal-race-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 700px;
+}
+.training-paces-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 300px;
+}
+.training-paces-data {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 800px;
+    padding: 20px;  
+}
+
+/* Predicted Section */
+
+.predicted-race-times-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.predicted-race-times-data {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 800px;
+    padding: 20px;
+}
+.pace-label {
+    color: rgb(142, 247, 255); 
+    background-color: rgba(0, 0, 0, 0.792);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 95px;
+}
+.pace-value {
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+.pace-length {
+    color: rgb(51, 157, 189);
+    text-align: center;
+    font-size: 11px;
+    font-weight: 200;
+    width: 95px;
+    background-color: rgba(0, 0, 0, 0.578);
+    padding: 2px 0px;
+}
+
+
+.goalItems {
+    background-color: rgba(255, 255, 255, 0.162);
+    color: rgb(10, 22, 48);
+    text-align: center;
+    width: 130px;
+    margin: 0px 2px;
+}
+

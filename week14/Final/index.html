@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&display=swap" rel="stylesheet">    
+    <title>Training Pace Calculator</title>
+</head>
+  <body>
+      <h1>TRAINING PACE CALCULATOR</h1>
+    <main>
+        <div id="mainData">
+            <div id="input-area">
+              <p>GOAL RACE:  (800M - MARATHON)</p>
+              <select id="goalRace">
+                <option value="Marathon">Marathon</option>
+                <option value="Half Marathon">Half Marathon</option>
+                <option value="10k">10k</option>
+                <option value="5k">5k</option>
+                <option value="3 mile">3 mile</option>
+                <option value="3200m">3200m</option>
+                <option value="1600m">1600m</option>
+                <option value="800m">800m</option>
+              </select>
+              <p>GOAL TIME:  (HH:MM:SS)</p>
+              <div id="goalPaceInput">
+                  <select id="hours2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                  :
+                  <select id="minutes1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                  <select id="minutes2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                  :
+                  <select id="seconds1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                  <select id="seconds2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+              </div>
+              <!-- <input type="text" id="goalTime" placeholder="Goal Time (HH:MM:SS)"> -->
+              <button id="submitButton" onclick="submitData()">Submit</button>
+        </div>
+        <div id="data-fields" class="grid-container">
+            <!-- Data fields will be displayed here -->
+        </div>
+    </main>
+  </body>
+</html>
